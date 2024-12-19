@@ -64,7 +64,7 @@ export default {
     color: #f4d03f;
 }
 
-/* Estilos existentes */
+    
 .texto {
     font-weight: 600;
     font-size: 48px;
