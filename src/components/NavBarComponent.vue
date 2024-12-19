@@ -54,23 +54,23 @@ export default {
     },
     methods: {
         CerrarSesion() {
-            localStorage.clear(); // Limpia los datos de usuario
-            this.name = ''; // Limpia el estado del nombre
-            this.surname = ''; // Limpia el estado del apellido
-            this.$router.push({ path: '/' }); // Redirige al usuario a la página de inicio
+            localStorage.clear(); 
+            this.name = '';
+            this.surname = '';
+            this.$router.push({ path: '/' }); 
         },
         existeUser() {
-            const userId = localStorage.getItem('userId'); // Obtiene el ID de usuario del localStorage
+            const userId = localStorage.getItem('userId'); ge
             const nombre = localStorage.getItem('name');
-            const apellido = localStorage.getItem('surname'); // Obtiene el apellido de usuario del localStorage
-            if (userId) { // Si existe un ID de usuario
+            const apellido = localStorage.getItem('surname'); 
+            if (userId) { 
                 this.name = nombre;
-                this.surname = apellido; // Almacena el nombre y apellido en el estado
+                this.surname = apellido;
             }
         },
     },
     mounted() {
-        this.existeUser(); // Verifica el estado del usuario al iniciar
+        this.existeUser(); 
     },
 };
 </script>
