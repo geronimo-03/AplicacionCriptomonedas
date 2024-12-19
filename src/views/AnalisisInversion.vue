@@ -91,7 +91,7 @@ export default {
         }
       });
 
-      // Calcular resultados finales para cada criptomoneda
+   
       this.resultados = Object.entries(resultados).map(([code, { balance, totalInvertido }]) => {
         const precioActual = precios[code.toLowerCase()] || 0;
         const valorActual = balance * precioActual;
@@ -99,7 +99,7 @@ export default {
 
         return {
           codigo: code.toUpperCase(),
-          resultado: resultado.toFixed(2), // Formato a 2 decimales
+          resultado: resultado.toFixed(2), 
         };
       });
     },
