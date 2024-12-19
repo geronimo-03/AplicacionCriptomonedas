@@ -2,10 +2,10 @@
     <div class="body">
       <div class="containerCompra">
         <h1>Compra/Venta</h1>
-        <!-- Verificar si el usuario está registrado; si no, mostrar un enlace para registrarse -->
+    
        
         <div>
-          <!-- Mostrar el ID del usuario si está registrado -->
+          
           <div class="form-group select">
             <label>Su número de ID es:</label>
             <label>{{ transaction.user_id }}</label>
@@ -53,7 +53,7 @@ export default {
   name: 'CompraVenta',
   data() {
     return {
-      // Inicializar el objeto de transacción y el estado de registro
+   
       transaction: {
         user_id: '',
         action: 'purchase',
@@ -75,7 +75,7 @@ export default {
       const userId = localStorage.getItem('userId');
       this.estadoUsuario = !!userId; //!! permite el que el user id sea un valor booleano
       if (this.estadoUsuario) {
-        this.transaction.user_id = userId; // Establecer el ID del usuario en la transacción
+        this.transaction.user_id = userId; 
       } else {
         // Redirigir a registro si no está registrado
         this.$router.push({ path: '/' });
@@ -85,13 +85,13 @@ export default {
       // Obtener el precio de la criptomoneda cuando cambia la criptomoneda seleccionada o la cantidad
       if (this.transaction.cripto_code && this.transaction.crypto_amount) {
         try {
-          // Realizar una solicitud GET para obtener el precio
+    
           const response = await axios.get(`https://criptoya.com/api/satoshitango/${this.transaction.cripto_code}/ars`);
           const price = response.data.totalBid; 
           
           this.transaction.money = (this.transaction.crypto_amount * price).toFixed(2);
         } catch (error) {
-          console.error('Error al obtener el precio de la criptomoneda:', error); // Registrar cualquier error
+          console.error('Error al obtener el precio de la criptomoneda:', error); 
         }
       }
     },
@@ -233,7 +233,7 @@ h1 {
 .form-control input {
   background-color: #333b47;
   color: #fff;
-  /* Asegúrate de que el texto sea legible */
+
 }
 
 .btnR {
