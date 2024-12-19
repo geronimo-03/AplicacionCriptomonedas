@@ -86,7 +86,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    background-image: url('../assets/fondo1.png'); /* Cambia por tu imagen */
+    background-image: url('../assets/fondo1.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
