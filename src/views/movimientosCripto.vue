@@ -101,7 +101,7 @@ export default {
 }
 </script>
 <style>
-/* Estilos para la vista */
+
 .movements-history {
     padding: 40px;
     margin-top: 120px;
